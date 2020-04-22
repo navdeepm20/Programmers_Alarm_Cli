@@ -15,48 +15,55 @@ import PhysicalExcercise
 
 
 def timCount():         #This function is used to create a clock for the program to work. This works for the 8 hours.
-    eb=0
-    wb=0
-    pb=0
+    try:
+        eb=0
+        wb=0
+        pb=0
 
-    hr=0
-    
-    while hr<=7:
+        hr=0
+        
+        while hr<=7:
 
-        mins = 0
-        while mins<=59:
-           
-            sec = 1
-            while sec <=59:
-               
-                t.sleep(1)
+            mins = 0
+            while mins<=59:
+            
+                sec = 1
+                while sec <=59:
                 
-                os.system('cls')
-                print(f"Time Now: {hr}:{mins}:{sec}")
-                  
-                
-                if sec == 59:
+                    t.sleep(1)
                     
-                    eb+=1
-                    wb+=1
-                    pb+=1
-                    # print(f"eb: {eb} , wb: {wb} , pb: {pb}")
-                   
-                sec+=1
-                
-            if eb == 3:
-                eb =0
-                EyeExcercise.logCreater()
-            if pb == 5:
-                pb =0
-                PhysicalExcercise.logCreater()
-            if wb == 7:
-                wb=0
-                DrinkWater.logCreater()
-            mins+=1
-   
-        hr+=1
- 
+                    os.system('cls')
+                    print(f"Time Now: {hr}:{mins}:{sec}")
+                    
+                    
+                    if sec == 59:
+                        
+                        eb+=1
+                        wb+=1
+                        pb+=1
+                        # print(f"eb: {eb} , wb: {wb} , pb: {pb}")
+                    
+                    sec+=1
+                    
+                if eb == 3:
+                    eb =0
+                    EyeExcercise.logCreater()
+                if pb == 5:
+                    pb =0
+                    DrinkWater.logCreater()
+                    
+                if wb == 7:
+                    wb=0
+                    PhysicalExcercise.logCreater()
+                    
+                mins+=1
+    
+            hr+=1
+    except EOFError:
+        mainModule()
+    except KeyboardInterrupt:
+        mainModule()
+
 def logReaderChoiceSelector():  #This  Fuction is used to select the right option to read the right log file
     
     while True:
@@ -79,56 +86,56 @@ def logReaderChoiceSelector():  #This  Fuction is used to select the right optio
                 input()    
         except ValueError:
             print("Enter the correct numbers only")
+            input("Press Enter to continue.")
         except KeyboardInterrupt:
-            print("Thankyou,See You Again.....")
-            input("Press Enter to Exit")
-            exit()
+            print("Thankyou For Using ...")
+            input("Press Enter to  Continue.")
         except EOFError:
-            print("Thankyou,See You Again.....")
-            input("Press Enter to Exit")
-            exit()
+            print("Thankyou for Using...")
+            input("Press Enter to Continue..")
         
         
             
-
 def mainModule():       #This is the main function which show the option menu to select the desired choice 
-    try:
-        while True:
-        
-            os.system('cls')
-        
-            print(f"-------------------Hello {usrnm}-------------------\n")
-            print("-------------Welcome to health manger--------------\n")
-            print("1)Start the Program\n2)See logs\n3)Exit the program\n")
-            choice = int(input("Enter your choice: "))
+    while True:
+        try:
+            while True:
+            
+                os.system('cls')
+            
+                print(f"-------------------Hello {usrnm}-------------------\n")
+                print("-------------Welcome to health manger--------------\n")
+                print("1)Start the Program\n2)See logs\n3)Exit the program\n")
+                choice = int(input("Enter your choice: "))
 
-            if choice == 1:
-                print("\n\nPress Ctrl+c to stop the countdonwn")
-                input("Press Enter to continue...")
-                timCount()
-            elif choice == 2:
-                logReaderChoiceSelector()
-            elif choice == 3:
-                    exit()
-            else:
-                print("Enter the right choice")
-                input("Press Enter to continue...")
+                if choice == 1:
+                    print("\n\nPress Ctrl+c to stop the countdonwn")
+                    input("Press Enter to continue...")
+                    timCount()
+                elif choice == 2:
+                    logReaderChoiceSelector()
+                elif choice == 3:
+                        exit()
+                else:
+                    print("Enter the right choice")
+                    input("Press Enter to continue...")
 
-    except KeyboardInterrupt:
-            print("\n\nThankyou,See You Again.....")
-            input("Press Enter to Exit")
-            exit() 
-    except EOFError:
-            print("\n\nThankyou,See You Again.....")
-            input("Press Enter to Exit")
-            exit()    
-    except ValueError:
-            print("Enter a valid choice only: ")
-#The Main Script starts from here.
-
-
+        except KeyboardInterrupt:
+            print("\n\nEnter a valid choice only")
+            input("\nPress Enter to continue.")   
+                
+        except EOFError:
+            print("\n\nEnter a valid choice only")
+            input("\nPress Enter to continue.")  
+        except ValueError:
+                print("\n\nEnter a valid choice only")
+                input("\nPress Enter to continue.")
 
 
+
+
+
+#Interpretation Starts from here
 
 
 if __name__ == "__main__":
