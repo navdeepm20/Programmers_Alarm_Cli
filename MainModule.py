@@ -1,4 +1,3 @@
-
 import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 mins = 0
@@ -12,49 +11,50 @@ import DrinkWater
 import EyeExcercise
 import PhysicalExcercise
 
+
+
+
 def timCount():         #This function is used to create a clock for the program to work. This works for the 8 hours.
-    hr = 0
+    eb=0
+    wb=0
+    pb=0
+
+    hr=0
     
-    
-    while hr<=8:
+    while hr<=7:
 
         mins = 0
-        while mins<=2:
+        while mins<=59:
            
             sec = 1
-            while sec <= 5:
+            while sec <=59:
                
                 t.sleep(1)
                 
                 os.system('cls')
-                if mins < 1:
+                print(f"Time Now: {hr}:{mins}:{sec}")
+                  
                 
-                    print("Timer Started For Next Water Break")
-                    print(f"Time left: {hr}:{mins}:{sec}")
-                if mins >=1 and mins < 2:
-                    print("Timer Started For Next Eye Break")
-                    print(f"Time left: {hr}:{mins}:{sec}")
-                if mins >=2 and mins < 3:
-                    print("Timer Started For Next Physical Break")
-                    print(f"Time left: {hr}:{mins}:{sec}")
+                if sec == 59:
                     
+                    eb+=1
+                    wb+=1
+                    pb+=1
+                    # print(f"eb: {eb} , wb: {wb} , pb: {pb}")
+                   
                 sec+=1
-            mins+=1
-            
-            if mins == 1:
                 
-                DrinkWater.logCreater()
-            if mins == 2:
-                
+            if eb == 3:
+                eb =0
                 EyeExcercise.logCreater()
-            if mins == 3:
-                
+            if pb == 5:
+                pb =0
                 PhysicalExcercise.logCreater()
-                
-                
-                
-                
-        
+            if wb == 7:
+                wb=0
+                DrinkWater.logCreater()
+            mins+=1
+   
         hr+=1
  
 def logReaderChoiceSelector():  #This  Fuction is used to select the right option to read the right log file
@@ -103,11 +103,9 @@ def mainModule():       #This is the main function which show the option menu to
             choice = int(input("Enter your choice: "))
 
             if choice == 1:
-                print("Press Ctrl+c to stop the countdonwn")
+                print("\n\nPress Ctrl+c to stop the countdonwn")
                 input("Press Enter to continue...")
-                
-                while True:
-                    timCount()
+                timCount()
             elif choice == 2:
                 logReaderChoiceSelector()
             elif choice == 3:
@@ -128,10 +126,10 @@ def mainModule():       #This is the main function which show the option menu to
             print("Enter a valid choice only: ")
 #The Main Script starts from here.
 
-mainModule()
+
 
 
 
 
 if __name__ == "__main__":
-        mainModule()
+    mainModule()

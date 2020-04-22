@@ -1,10 +1,11 @@
+
 import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 from os.path import expanduser
 import time as t
-from pygame import mixer
-mixer.init()
-mixer.music.load("Physical.mp3")
+import pygame
+
+
 
 
 import getpass
@@ -39,42 +40,18 @@ def getCurrentDateandTime():
     currentD = Dat.strftime("%d/%m/%Y") 
     currentT = Dat.strftime("%I:%M %p")
     return currentD , currentT
-    
-
-    
-
-def timCount():
-    mins =1
-    hr = 0
-    while mins!=0:
-        sec = 20
-        while sec >= 0:
-           
-            t.sleep(1)
-           
-            os.system("cls")
-            print("Timer Started For Next Eye Break")
-            print(f"Time left: {hr}:{mins}:{sec}")
-            
-         
-            sec-=1
-        print("Countdown paused")
-       
-        mixer.music.play(-1)
-
-        logCreater()
-        mixer.music.stop()
-        
-        mins-=1
-
+ 
 def logCreater():
         print("Countdown paused")
-       
-        mixer.music.play(-1)
+        current_dir = os.getcwd()
+        pygame.mixer.init()
+        pygame.mixer.music.load("Physound.mp3")
+        pygame.mixer.music.play(-1)
         write_msg = f"Physical Excercise Done by {usernm}"
         while 1:
         
             try:
+                print("Time for a Physical Excercise Break , After the Physical Excercise Break")
                 usr_msg = input("Type \"Done\" to stop this alarm: ")
                 
                 usr_msg = usr_msg.lower()
@@ -86,7 +63,10 @@ def logCreater():
                         cdat , ctim = getCurrentDateandTime()
                         fi.write(f"Date: {cdat}          Time: {ctim}          Message: {write_msg}\n")
                         # print("Log Created")
-                        mixer.music.stop()
+                        pygame.mixer.music.stop()
+                        pygame.mixer.quit()
+                        os.chdir(current_dir)
+                        # pygame.mixer.music.unload()
                         break
                         
                 
@@ -110,4 +90,5 @@ def logReader():
     
 
 if __name__ =="__main__":
-    logReader()
+    print("Please Run the MainModule.py only")
+    input("Press Enter to continue...")
