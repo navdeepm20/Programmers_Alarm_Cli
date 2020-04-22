@@ -65,7 +65,7 @@ def logCreater():
                     with open("eye_excercise_log.txt","a") as fi:
                         cdat , ctim = getCurrentDateandTime()
                         fi.write(f"Date: {cdat}          Time: {ctim}          Message: {write_msg}\n")
-                        # print("Log Created")
+                        
                         
                         pygame.mixer.music.stop()
                         pygame.mixer.quit()

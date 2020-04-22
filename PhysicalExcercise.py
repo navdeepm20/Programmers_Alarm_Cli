@@ -66,7 +66,7 @@ def logCreater():
                         pygame.mixer.music.stop()
                         pygame.mixer.quit()
                         os.chdir(current_dir)
-                        # pygame.mixer.music.unload()
+                       
                         break
                         
                 
@@ -77,7 +77,7 @@ def logReader():
         
         checknSetdir()
         try:
-            print(os.getcwd())
+            
             with open("Physical_Excercise_log.txt","r") as fi:
                 lis = fi.readlines()
                 for i in lis:

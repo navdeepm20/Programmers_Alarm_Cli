@@ -12,8 +12,6 @@ import EyeExcercise
 import PhysicalExcercise
 
 
-
-
 def timCount():         #This function is used to create a clock for the program to work. This works for the 8 hours.
     try:
         eb=0
