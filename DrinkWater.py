@@ -63,7 +63,7 @@ def logCreater():
                         cdat , ctim = getCurrentDateandTime()
                         fi.write(f"Date: {cdat}          Time: {ctim}          Message: {write_msg}\n")
                         pygame.mixer.music.stop()
-                        # pygame.mixer.music.unload()
+                       
                         pygame.mixer.quit()
                         os.chdir(current_dir)
                         break
