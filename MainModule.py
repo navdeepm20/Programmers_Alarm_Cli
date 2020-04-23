@@ -51,11 +51,12 @@ def timCount():         #This function is used to create a clock for the program
                     EyeExcercise.logCreater()
                 if pb == 45:
                     pb =0
-                    DrinkWater.logCreater()
+                    PhysicalExcercise.logCreater()
                     
                 if wb ==60:
                     wb=0
-                    PhysicalExcercise.logCreater()
+                    DrinkWater.logCreater()
+                    
                     
                 mins+=1
     
