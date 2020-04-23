@@ -1,5 +1,8 @@
 import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+import pygame
+pygame.mixer.init()
+
 mins = 0
 from os.path import expanduser
 usrpath = expanduser("~")
@@ -45,14 +48,14 @@ def timCount():         #This function is used to create a clock for the program
                     
                     sec+=1
                     
-                if eb == 3:
+                if eb == 20:
                     eb =0
                     EyeExcercise.logCreater()
-                if pb == 5:
+                if pb == 45:
                     pb =0
                     DrinkWater.logCreater()
                     
-                if wb == 7:
+                if wb ==60:
                     wb=0
                     PhysicalExcercise.logCreater()
                     
@@ -60,8 +63,10 @@ def timCount():         #This function is used to create a clock for the program
     
             hr+=1
     except EOFError:
+        pygame.mixer.quit()
         mainModule()
     except KeyboardInterrupt:
+        pygame.mixer.quit()
         mainModule()
 
 def logReaderChoiceSelector():  #This  Fuction is used to select the right option to read the right log file

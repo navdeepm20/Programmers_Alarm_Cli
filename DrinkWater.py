@@ -54,7 +54,7 @@ def logCreater():
                 
                 usr_msg = usr_msg.lower()
                 if usr_msg != "done":
-                    raise ValueError("Invalid Answer")
+                    raise Exception("Invalid Answer")
                 elif "done" == usr_msg:
                     
                     checknSetdir()
@@ -70,7 +70,8 @@ def logCreater():
                     
             except Exception as e:
                 print(e)
-    
+                input("Press Enter to Continue")
+            
             
 def logReader():
 
@@ -85,10 +86,14 @@ def logReader():
         except FileNotFoundError:
             print("No log is created yet")
             input("Press to contiue")
+        except Exception as e:
+            print(e)
+            input("Press Enter to Continue")
             
         
              
 if __name__ == "__main__":
-    print("Please Run the MainModule.py only")
-    input("Press Enter to continue...")
+    logCreater()
+    #print("Please Run the MainModule.py only")
+    #input("Press Enter to continue...")
 
