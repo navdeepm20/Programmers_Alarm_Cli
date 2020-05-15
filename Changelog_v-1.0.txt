@@ -15,7 +15,7 @@ Bug Fixes:
 	play.
 
 Additional:
-	Timer is not set to realistic timigs.
+	Timer is set to realistic timigs.
 
 Author:
 	Navdeep Mishra
