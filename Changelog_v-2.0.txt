@@ -15,7 +15,7 @@ Bug Fixes:
 	Showing previous garbage when typed wrong input. Now clean interface.
 
 Additional:
-	Timer is not set to realistic timigs Now.
+	Timer is set to realistic timigs Now.
 
 Author:
 	Navdeep Mishra
