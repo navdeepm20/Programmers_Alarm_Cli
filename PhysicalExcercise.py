@@ -94,6 +94,6 @@ def logReader():
     
 
 if __name__ =="__main__":
-    logCreater()
-    #print("Please Run the MainModule.py only")
-    #input("Press Enter to continue...")
+    
+    print("Please Run the MainModule.py only")
+    input("Press Enter to continue...")

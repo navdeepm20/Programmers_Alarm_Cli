@@ -89,7 +89,7 @@ def logReader():
                     print(i)
             input("Press to contiue")
         except FileNotFoundError:
-            print("File is not created Yet")
+            print("No Log is created Yet")
             input("Press to contiue")
         except Exception as e:
             print(e)
@@ -99,6 +99,5 @@ def logReader():
 
 if __name__ =="__main__":
     while True:
-        logCreater()
-        #print("Please Run the MainModule.py only")
-        #input("Press Enter to continue...")
+        print("Please Run the MainModule.py only")
+        input("Press Enter to continue...")
