@@ -1,0 +1,21 @@
+_____________________Changelog of Version 2.0_______________________
+
+Added:
+	Notify System
+	
+Removed:
+	None
+
+Depricated:
+	None
+Security:
+	None
+Bug Fixes:
+	Notification Sounds moved to a new location now.	 
+	Showing previous garbage when typed wrong input. Now clean interface.
+
+Additional:
+	Timer is not set to realistic timigs Now.
+
+Author:
+	Navdeep Mishra

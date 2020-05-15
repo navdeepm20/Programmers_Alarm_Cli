@@ -1,0 +1,7 @@
+Some additional modules required to run this program.
+	- plyer 1.4.3 (pip install plyer)
+	- pygame 1.9.6 (pip instll pygame)
+
+Author - Navdeep Mishra
+
+	

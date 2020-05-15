@@ -8,7 +8,7 @@ usernm = getpass.getuser()
 from datetime import datetime
 import pygame
 current_dir = "none"
-
+from plyer import notification
 
    
     
@@ -38,21 +38,35 @@ def getCurrentDateandTime():
     return currentD , currentT
     
 
+def notifier():
+    
+   
+    notification.notify(
+            title = "Time for a Eye Excercise break.",
+            message ="Please do eye excercise and after that open the program and type \"Done\" in the Program Windows",
+            app_icon = ".\\Notification_Icons\\Eye.ico",
+            app_name = "Programmers alarm"
+            
+        
+        )
+    t.sleep(4)
+
 
 def logCreater():
         
+        notifier()
         current_dir = os.getcwd()
         
         print("Countdown paused")
         pygame.mixer.init()
-        pygame.mixer.music.load("Eyesound.mp3")
+        pygame.mixer.music.load(".\\Notification_Sounds\\Eyesound.mp3")
         pygame.mixer.music.play(-1)
        
         write_msg = f"Eye Excercise Done by {usernm}"
         
        
         while 1:
-        
+            os.system('cls')
             try:
                 print("Time for a Eye Excercise Break , After the Eye Excercise")
                 usr_msg = input("Type \"Done\" to stop this alarm: ")
@@ -98,6 +112,7 @@ def logReader():
     
 
 if __name__ =="__main__":
-    while True:
-        print("Please Run the MainModule.py only")
-        input("Press Enter to continue...")
+    
+    print("Please Run the MainModule.py only")
+    input("Press Enter to continue...")
+    

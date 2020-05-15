@@ -5,7 +5,7 @@ from os.path import expanduser
 import time as t
 import pygame
 
-
+from plyer import notification
 
 
 import getpass
@@ -40,16 +40,29 @@ def getCurrentDateandTime():
     currentD = Dat.strftime("%d/%m/%Y") 
     currentT = Dat.strftime("%I:%M %p")
     return currentD , currentT
- 
+def notifier():
+    
+   
+    notification.notify(
+            title = "Time for a Short Physical Excercise break.",
+            message ="Please do some mini physical excercises and after that open the program and type \"Done\" in the Program Windows",
+            app_icon = ".\\Notification_Icons\\Excercise.ico",
+            app_name = "Programmers alarm"
+            
+        
+        )
+    t.sleep(4) 
+    
 def logCreater():
+        notifier()
         print("Countdown paused")
         current_dir = os.getcwd()
         pygame.mixer.init()
-        pygame.mixer.music.load("Physound.mp3")
+        pygame.mixer.music.load(".\\Notification_Sounds\\Physound.mp3")
         pygame.mixer.music.play(-1)
         write_msg = f"Physical Excercise Done by {usernm}"
         while 1:
-        
+            os.system('cls')
             try:
                 print("Time for a Physical Excercise Break , After the Physical Excercise Break")
                 usr_msg = input("Type \"Done\" to stop this alarm: ")

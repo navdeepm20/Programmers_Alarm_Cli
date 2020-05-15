@@ -15,6 +15,7 @@ import EyeExcercise
 import PhysicalExcercise
 
 
+
 def timCount():         #This function is used to create a clock for the program to work. This works for the 8 hours.
     try:
         eb=0
@@ -37,17 +38,18 @@ def timCount():         #This function is used to create a clock for the program
                     print(f"Time Now: {hr}:{mins}:{sec}")
                     
                     
-                    if sec == 59:
+                    if sec ==59:
                         
                         eb+=1
                         wb+=1
                         pb+=1
-                        # print(f"eb: {eb} , wb: {wb} , pb: {pb}")
+                        
                     
                     sec+=1
                     
                 if eb == 20:
                     eb =0
+                   
                     EyeExcercise.logCreater()
                 if pb == 45:
                     pb =0
