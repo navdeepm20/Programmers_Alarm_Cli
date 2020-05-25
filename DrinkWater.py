@@ -4,7 +4,7 @@ os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 
 
-
+from plyer import notification
 import time as t
 import getpass
 from datetime import datetime
@@ -39,15 +39,27 @@ def getCurrentDateandTime():
     currentD = Dat.strftime("%d/%m/%Y") 
     currentT = Dat.strftime("%I:%M %p")
     return currentD , currentT
-
+def notifier():
+    
+   
+    notification.notify(
+            title = "Time for a Water break.",
+            message ="Please drink some water and after that open the program and type \"Done\" in the Program Windows",
+            app_icon = ".\\Notification_Icons\\Water.ico",
+            app_name = "Programmers alarm"
+            
+        
+        )
+    t.sleep(4)
 def logCreater():
+        notifier()
         current_dir = os.getcwd()
         pygame.mixer.init()
-        pygame.mixer.music.load("Watersound.mp3")
+        pygame.mixer.music.load(".\\Notification_Sounds\\Watersound.mp3")
         pygame.mixer.music.play(-1)
         write_msg = f"Drink Water Done by {usernm}"
         while 1:
-        
+            os.system('cls')
             try:
                 print("Time for a Water Break , After the Water Break")
                 usr_msg = input("Type \"Done\" to stop this alarm: ")
