@@ -62,7 +62,7 @@ def logCreater():
             os.system('cls')
             try:
                 print("Time for a Water Break , After the Water Break")
-                usr_msg = input("Type \"Done\" to stop this alarm: ")
+                usr_msg = input("Type \"Done\" to stop this alarm: ").strip()
                 
                 usr_msg = usr_msg.lower()
                 if usr_msg != "done":
@@ -108,4 +108,4 @@ if __name__ == "__main__":
     
     print("Please Run the MainModule.py only")
     input("Press Enter to continue...")
-
+    

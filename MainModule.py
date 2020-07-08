@@ -3,7 +3,7 @@ os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 pygame.mixer.init()
 
-mins = 0
+
 from os.path import expanduser
 usrpath = expanduser("~")
 import getpass

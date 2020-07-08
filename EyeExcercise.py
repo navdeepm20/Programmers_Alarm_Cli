@@ -69,7 +69,7 @@ def logCreater():
             os.system('cls')
             try:
                 print("Time for a Eye Excercise Break , After the Eye Excercise")
-                usr_msg = input("Type \"Done\" to stop this alarm: ")
+                usr_msg = input("Type \"Done\" to stop this alarm: ").strip()
                 
                 usr_msg = usr_msg.lower()
                 if usr_msg != "done":
