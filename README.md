@@ -27,11 +27,11 @@
  <img src="https://github.com/navdeepm20/Programmers_Alarm_Cli/blob/master/sample_previews/logs_samples.png">
  <h4>Timer</h4>
  <img src="https://github.com/navdeepm20/Programmers_Alarm_Cli/blob/master/sample_previews/timerpreview.png">
- <h4>Eye Break Notification</h4>
+ <h4>Eye Break Notification on Windows 10</h4>
  <img src="https://github.com/navdeepm20/Programmers_Alarm_Cli/blob/master/sample_previews/eyebreaknotify.png">
- <h4>Water Break Notification</h4>
+ <h4>Water Break Notification on Windows 10</h4>
  <img src="https://github.com/navdeepm20/Programmers_Alarm_Cli/blob/master/sample_previews/waterbreak.png">
- <h4>Physical Break Notification</h4>
+ <h4>Physical Break Notification on Windows 10</h4>
  <img src="https://github.com/navdeepm20/Programmers_Alarm_Cli/blob/master/sample_previews/phy_breaksample.png">
 
 </p>
