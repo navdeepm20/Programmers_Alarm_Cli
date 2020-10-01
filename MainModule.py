@@ -29,7 +29,7 @@ def timCount():         #This function is used to create a clock for the program
             mins = 0
             while mins<=59:
             
-                sec = 1
+                sec = 0
                 while sec <=59:
                 
                     t.sleep(1)
