@@ -110,7 +110,7 @@ def mainModule():       #This is the main function which show the option menu to
                 os.system('cls')
             
                 print(f"-------------------Hello {usrnm}-------------------\n")
-                print("-------------Welcome to health manger--------------\n")
+                print("-------------Welcome to Programmers Alarm--------------\n")
                 print("1)Start the Program\n2)See logs\n3)Exit the program\n")
                 choice = int(input("Enter your choice: "))
 
