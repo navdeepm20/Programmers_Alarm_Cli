@@ -22,7 +22,7 @@
 
 <p align="center">
  <h4>Main Program</h4>
- <img src="https://github.com/navdeepm20/Programmers_Alarm_Cli/blob/master/sample_previews/mainprogram_sample">
+ <img src="https://github.com/navdeepm20/Programmers_Alarm_Cli/blob/master/sample_previews/mainprogram_sample.png">
  <h4>Logs</h4>
  <img src="https://github.com/navdeepm20/Programmers_Alarm_Cli/blob/master/sample_previews/logs_samples.png">
  <h4>Timer</h4>
