@@ -23,7 +23,7 @@ def userDirFinder():
     
 def checknSetdir():
     mainp=userDirFinder()
-    target_path = os.path.join(mainp,"HealthManger","Water_log")
+    target_path = os.path.join(mainp,"Programmers_Alram","Water_log")
     
     if os.path.exists(target_path):
         os.chdir(target_path)
