@@ -11,7 +11,7 @@
 # Project Information
 <p align="left">  
 <img src="https://img.shields.io/badge/Language-Python-blue">
-<img src="https://img.shields.io/badge/Platform-Windows-brightgreen">
+<img src="https://img.shields.io/badge/Platform-Windows 10-brightgreen">
 <img src="https://img.shields.io/badge/CLI-Python-blueviolet">
 <img src="https://img.shields.io/badge/Version-2.0-ff69b4">
 <img src="https://img.shields.io/badge/Terminal Required-Powesher/Cmd-34baeb"
